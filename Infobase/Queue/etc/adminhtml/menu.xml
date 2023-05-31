@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add 
+            id="Infobase_Queue::infobase" 
+            title="Infobase" 
+            module="Infobase_Queue" 
+            sortOrder="10" 
+            resource="Infobase_Queue::infobase"
+        />
+        <add 
+            id="Infobase_Queue::queue" 
+            title="Queue" 
+            module="Infobase_Queue" 
+            sortOrder="5" 
+            action="infobasequeue/grid/index" 
+            resource="Infobase_Queue::queue" 
+            parent="Infobase_Queue::infobase"
+            dependsOnConfig="infobase_queue/general/active"
+        />
+    </menu>
+</config>
